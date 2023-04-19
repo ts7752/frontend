@@ -12,7 +12,7 @@ import { SelectList } from "react-native-dropdown-select-list";
 
 const Stack = createStackNavigator();
 
-const Uniauthhakbun = () => {
+const Idfind = () => {
   const [category, setCategory] = useState<any>("");
   const [subcategory, setSubategory] = useState<any>("");
 
@@ -24,14 +24,14 @@ const Uniauthhakbun = () => {
   return (
     <View style={styles.view}>
       <View style={styles.view2}>
-        <Text style={styles.text1}>대학교 인증</Text>
-        <Text style={styles.text2}>학번을 입력해 주세요</Text>
-        <TextInput style={styles.input} placeholder="학번"></TextInput>
+        <Text style={styles.text1}>아이디</Text>
+        <Text style={styles.text2}>아이디를 찾았어요!</Text>
+        <TextInput style={styles.input} placeholder="아이디"></TextInput>
       </View>
       <View style={styles.view3}>
         <TouchableOpacity
           style={styles.buttonchild}
-          onPress={() => navigation.navigate("Uniauthhakgyo")}
+          onPress={() => navigation.navigate("Login")}
         >
           <Text style={{ color: "#ffffff", fontWeight: "bold", fontSize: 15 }}>
             다음
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: "gray",
     borderWidth: 1,
+    textAlign: "center",
   },
   view3: {
     flex: 4,
@@ -97,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Uniauthhakbun;
+export default Idfind;

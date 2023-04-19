@@ -12,7 +12,7 @@ import { SelectList } from "react-native-dropdown-select-list";
 
 const Stack = createStackNavigator();
 
-const Uniauth = () => {
+const Uniauthhakgyo = () => {
   const [category, setCategory] = useState<any>("");
   const [subcategory, setSubategory] = useState<any>("");
 
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Uniauth;
+export default Uniauthhakgyo;

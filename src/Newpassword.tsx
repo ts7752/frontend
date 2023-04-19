@@ -12,7 +12,7 @@ import { SelectList } from "react-native-dropdown-select-list";
 
 const Stack = createStackNavigator();
 
-const Uniauthhakbun = () => {
+const Newpassword = () => {
   const [category, setCategory] = useState<any>("");
   const [subcategory, setSubategory] = useState<any>("");
 
@@ -24,14 +24,18 @@ const Uniauthhakbun = () => {
   return (
     <View style={styles.view}>
       <View style={styles.view2}>
-        <Text style={styles.text1}>대학교 인증</Text>
-        <Text style={styles.text2}>학번을 입력해 주세요</Text>
-        <TextInput style={styles.input} placeholder="학번"></TextInput>
+        <Text style={styles.text1}>새로운 비밀번호 입력</Text>
+        <Text style={styles.text2}>새로운 비밀번호를 입력해 주세요</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="새로운 비밀번호"
+        ></TextInput>
+        <TextInput style={styles.input} placeholder="비밀번호 확인"></TextInput>
       </View>
       <View style={styles.view3}>
         <TouchableOpacity
           style={styles.buttonchild}
-          onPress={() => navigation.navigate("Uniauthhakgyo")}
+          onPress={() => navigation.navigate("Passwordsuc")}
         >
           <Text style={{ color: "#ffffff", fontWeight: "bold", fontSize: 15 }}>
             다음
@@ -52,6 +56,7 @@ const styles = StyleSheet.create({
   view2: {
     flex: 2,
     width: "100%",
+    paddingTop: 75,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -66,13 +71,14 @@ const styles = StyleSheet.create({
   input: {
     width: "80%",
     height: "20%",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#E8ECF4",
     justifyContent: "flex-end",
     alignItems: "center",
-    marginTop: 50,
+    marginTop: 20,
     borderRadius: 5,
     borderColor: "gray",
-    borderWidth: 1,
+    borderWidth: 0.3,
+    textAlign: "center",
   },
   view3: {
     flex: 4,
@@ -81,13 +87,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text2: {
-    marginTop: 5,
+    marginTop: 10,
     color: "gray",
     width: "100%",
-    fontSize: 12,
+    fontSize: 16,
     marginLeft: 80,
   },
   buttonchild: {
+    marginTop: 30,
     backgroundColor: "#000000",
     alignItems: "center",
     justifyContent: "center",
@@ -97,4 +104,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Uniauthhakbun;
+export default Newpassword;

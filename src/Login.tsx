@@ -46,6 +46,46 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.textview}>
+        <Text style={styles.text_1}>Welcome!</Text>
+        <Text style={styles.text_1}>Myplace UNI</Text>
+      </View>
+      <View style={styles.textinputview}>
+        <TextInput style={styles.input} placeholder="이메일"></TextInput>
+        <TextInput style={styles.input} placeholder="비밀번호"></TextInput>
+      </View>
+      <View style={styles.buttonview}>
+        <TouchableOpacity
+          style={styles.idpasscss}
+          onPress={() => navigation.navigate("Idhakbun")}
+        >
+          <Text> 아이디 찾기 </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.idpasscss}
+          onPress={() => navigation.navigate("Passwordid")}
+        >
+          <Text>비밀번호 찾기</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttoncss}>
+          <Text
+            style={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              alignItems: "center",
+              fontSize: 14,
+            }}
+          >
+            {" "}
+            로그인
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+
+    /*
+    <View style={styles.container}>
       <View style={styles.text1}>
         <Text style={styles.myplaceuni}>MyPlaceUNI</Text>
       </View>
@@ -68,11 +108,6 @@ const Login = () => {
           autoCapitalize="none"
           autoCorrect={false}
           secureTextEntry={true}
-        />
-        <Image
-          source={require("../assets/logineye.png")}
-          resizeMode="cover"
-          style={styles.passwordIcon}
         />
       </View>
       <View style={styles.button}>
@@ -107,6 +142,7 @@ const Login = () => {
         </TouchableOpacity>
       </View>
     </View>
+    */
   );
 };
 
@@ -115,11 +151,54 @@ export default Login;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: 932,
-    overflow: "hidden",
-    width: "100%",
     backgroundColor: "#ffffff",
+    justifyContent: "center",
+  },
+  textview: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  text_1: {
+    marginLeft: 30,
+    fontSize: 25,
+    color: "#000000",
+    fontWeight: "bold",
+  },
+  textinputview: {
+    flex: 1,
+    justifyContent: "center",
     alignItems: "center",
+  },
+  input: {
+    borderRadius: 5,
+    alignItems: "center",
+    borderColor: "gray",
+    borderWidth: 0.5,
+    backgroundColor: "whitesmoke",
+    width: "80%",
+    height: "37.5%",
+    marginTop: 15,
+    textAlign: "center",
+    fontSize: 14,
+  },
+  buttonview: {
+    flex: 3,
+    alignItems: "center",
+  },
+  buttoncss: {
+    backgroundColor: "#000000",
+    width: "80%",
+    height: "15%",
+    marginTop: 30,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 8,
+  },
+  idpasscss: {
+    alignItems: "flex-end",
+    marginTop: 10,
+    marginLeft: "40%",
+    borderRadius: 8,
   },
   textInput: {
     top: 349,

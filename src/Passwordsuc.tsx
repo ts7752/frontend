@@ -6,7 +6,7 @@ import Uniauth from "./Uniauth";
 
 const Stack = createStackNavigator();
 
-const Emailauthsuccess = () => {
+const Passwordsuc = () => {
   const navigation = useNavigation<any>();
   return (
     <View style={styles.container}>
@@ -15,8 +15,8 @@ const Emailauthsuccess = () => {
         source={require("../assets/RegisterDone.png")}
       ></Image>
       <View style={styles.flextextview}>
-        <Text style={styles.text2}>인증 완료</Text>
-        <Text style={styles.text3}>환영 합니다!</Text>
+        <Text style={styles.text2}>비밀번호 입력 완료</Text>
+        <Text style={styles.text3}>잘했어요!</Text>
       </View>
       <View style={styles.nextbutton}>
         <TouchableOpacity
@@ -30,7 +30,7 @@ const Emailauthsuccess = () => {
   );
 };
 
-export default Emailauthsuccess;
+export default Passwordsuc;
 
 const styles = StyleSheet.create({
   container: {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     lineHeight: 23,
     fontWeight: "500",
     color: "gray",
-    width: 234,
+    fontSize: 15,
     textAlign: "center",
   },
   nextbutton: {
