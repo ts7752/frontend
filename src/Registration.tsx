@@ -25,10 +25,8 @@ const Registration = () => {
 
   const handleRegister = () => {
     if (password !== passwordconfirm) {
-      console.log("passwords do not match");
       return false;
     } else if (password.length < 8 && passwordconfirm.length < 8) {
-      console.log("비밀번호는 8자 이상입니다");
       return false;
     } else if (
       password.length >= 8 &&
@@ -36,7 +34,6 @@ const Registration = () => {
       email.length > 0 &&
       id.length > 0
     ) {
-      console.log("passwords match");
       return true;
     }
   };
@@ -91,69 +88,25 @@ const Registration = () => {
       <View style={styles.container}>
         <Text style={{ fontWeight: "bold", fontSize: 23 }}>회원가입</Text>
         <View style={{ marginTop: 40 }}>
-          <Text
-            style={{
-              alignContent: "center",
-              textAlign: "center",
-              color: "#000000",
-              fontWeight: "bold",
-              marginTop: 20,
-            }}
-          >
-            이메일
-          </Text>
           <TextInput
             style={styles.inputlayout}
-            placeholder="email"
+            placeholder="이메일"
             onChangeText={(email) => setEmail(email)}
             autoCorrect={false}
             keyboardType="email-address"
           />
-          <Text
-            style={{
-              alignContent: "center",
-              textAlign: "center",
-              color: "#000000",
-              fontWeight: "bold",
-              marginTop: 20,
-            }}
-          >
-            아이디
-          </Text>
           <TextInput
             style={styles.inputlayout}
             placeholder="아이디"
             onChangeText={(id) => setId(id)}
             autoCorrect={false}
           />
-          <Text
-            style={{
-              alignContent: "center",
-              textAlign: "center",
-              color: "#000000",
-              fontWeight: "bold",
-              marginTop: 20,
-            }}
-          >
-            비밀번호
-          </Text>
           <TextInput
             style={styles.inputlayout}
             placeholder="비밀번호"
             onChangeText={(password) => setPassword(password)}
             autoCorrect={false}
           />
-          <Text
-            style={{
-              alignContent: "center",
-              textAlign: "center",
-              color: "#000000",
-              fontWeight: "bold",
-              marginTop: 20,
-            }}
-          >
-            비밀번호 확인
-          </Text>
           <TextInput
             style={styles.inputlayout}
             placeholder="비밀번호 확인"

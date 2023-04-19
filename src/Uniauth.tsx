@@ -20,6 +20,7 @@ const Uniauth = () => {
   const [hakgyo, setHakgyo] = useState<any>("");
   const [hakgua, setHakgua] = useState<any>("");
 
+  
   const navigation = useNavigation<any>();
   return (
     <View style={styles.view}>

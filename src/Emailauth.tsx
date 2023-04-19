@@ -12,7 +12,15 @@ import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 
 const Emailauth = () => {
-  const [emailauth1, setEmail] = useState<any>("");
+  const [email, setEmail] = useState<any>("");
+
+  const handleRegister = () => {
+    if (email.length <= 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   const navigation = useNavigation<any>();
   return (
@@ -24,14 +32,18 @@ const Emailauth = () => {
         <TextInput
           style={styles.confirminputitem}
           placeholder="이메일"
-          onChangeText={(emailauth1) => setEmail(emailauth1)}
+          onChangeText={(email) => setEmail(email)}
         ></TextInput>
       </View>
 
       <View style={styles.endbuttonposition}>
         <TouchableOpacity
           onPress={() => navigation.navigate("Emailauthnumber")}
-          style={styles.endbuttonchild}
+          style={[
+            styles.endbuttonchild,
+            handleRegister() ? { opacity: 1 } : { opacity: 0.5 },
+          ]}
+          disabled={!handleRegister()}
         >
           <Text style={styles.buttonText1}>완료</Text>
         </TouchableOpacity>

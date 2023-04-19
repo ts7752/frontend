@@ -16,9 +16,15 @@ const Uniauthhakgua = () => {
   const [category, setCategory] = useState<any>("");
   const [subcategory, setSubategory] = useState<any>("");
 
-  const [hakbun, setHakbun] = useState<any>("");
-  const [hakgyo, setHakgyo] = useState<any>("");
   const [hakgua, setHakgua] = useState<any>("");
+
+  const handleRegister = () => {
+    if (hakgua.length <= 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   const navigation = useNavigation<any>();
   return (
@@ -26,12 +32,20 @@ const Uniauthhakgua = () => {
       <View style={styles.view2}>
         <Text style={styles.text1}>대학교 인증</Text>
         <Text style={styles.text2}>학과를 선택해 주세요</Text>
-        <TextInput style={styles.input} placeholder="학과"></TextInput>
+        <TextInput
+          style={styles.input}
+          placeholder="학과"
+          onChangeText={(hakgua) => setHakgua(hakgua)}
+        ></TextInput>
       </View>
       <View style={styles.view3}>
         <TouchableOpacity
-          style={styles.buttonchild}
+          style={[
+            styles.buttonchild,
+            handleRegister() ? { opacity: 1 } : { opacity: 0.5 },
+          ]}
           onPress={() => navigation.navigate("Emailauth")}
+          disabled={!handleRegister()}
         >
           <Text style={{ color: "#ffffff", fontWeight: "bold", fontSize: 15 }}>
             다음

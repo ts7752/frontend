@@ -59,14 +59,14 @@ const Login = () => {
           style={styles.idpasscss}
           onPress={() => navigation.navigate("Idhakbun")}
         >
-          <Text> 아이디 찾기 </Text>
+          <Text style={{ fontSize: 10 }}> 아이디 찾기 </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.idpasscss}
           onPress={() => navigation.navigate("Passwordid")}
         >
-          <Text>비밀번호 찾기</Text>
+          <Text style={{ fontSize: 10 }}>비밀번호 찾기</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttoncss}>
           <Text
@@ -80,6 +80,12 @@ const Login = () => {
             {" "}
             로그인
           </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{ backgroundColor: "#000000", marginTop: 50 }}
+          onPress={() => navigation.navigate("Registration")}
+        >
+          <Text style={{ color: "#ffffff" }}> 회원가입 으로 이동</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -197,137 +203,7 @@ const styles = StyleSheet.create({
   idpasscss: {
     alignItems: "flex-end",
     marginTop: 10,
-    marginLeft: "40%",
+    marginLeft: "60%",
     borderRadius: 8,
-  },
-  textInput: {
-    top: 349,
-    left: 49,
-    width: 331,
-  },
-  enteryourpasswordinputchild: {
-    backgroundColor: "#ffffff",
-    borderWidth: 2,
-    borderColor: "#e8ecf4",
-    borderStyle: "solid",
-    left: 0,
-    top: 0,
-    height: 56,
-    width: 331,
-    position: "absolute",
-    alignItems: "center",
-  },
-  textInputchild: {
-    backgroundColor: "#ffffff",
-    borderWidth: 1,
-    borderColor: "#e8ecf4",
-    borderStyle: "solid",
-    left: 0,
-    top: 0,
-  },
-  textInputemail: {
-    paddingTop: 20,
-    paddingBottom: 20,
-    width: 400,
-    fontSize: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#000",
-    marginBottom: 10,
-    textAlign: "center",
-  },
-  button: {
-    flex: 2,
-    height: "40%",
-    marginTop: "0%",
-    bottom: "0%",
-    left: "0%",
-    right: "0%",
-    position: "absolute",
-    width: "100%",
-    alignItems: "center",
-  },
-  myplaceuni: {
-    fontSize: 30,
-    letterSpacing: -0.3,
-    lineHeight: 39,
-    fontWeight: "bold",
-    color: "#000000",
-    width: 200,
-    textAlign: "left",
-    height: 97,
-    left: 0,
-    top: 0,
-    position: "absolute",
-  },
-  text1: {
-    top: 133,
-    right: 115,
-    left: 35,
-    height: 97,
-    position: "absolute",
-  },
-  enteryouremailinput: {
-    top: 270,
-
-    width: 331,
-    position: "absolute",
-    height: 56,
-    alignItems: "center",
-  },
-  enteryourpasswordinput: {
-    top: 349,
-
-    width: 331,
-    position: "absolute",
-    height: 56,
-    alignItems: "center",
-  },
-  loginbuttonchild: {
-    height: "6.43%",
-    width: "88.27%",
-    top: "55.32%",
-    right: "5.92%",
-    bottom: "43.22%",
-    left: "5.81%",
-    backgroundColor: "#000000",
-    position: "absolute",
-  },
-  loginbuttontext: {
-    textAlign: "center",
-    fontWeight: "600",
-    position: "absolute",
-    color: "#ffffff",
-    top: 20,
-    left: 164,
-    width: 52,
-    height: 20,
-  },
-  enteryourinputpassword: {
-    top: 349,
-    left: 49,
-    width: 331,
-  },
-  passwordIcon: {
-    top: 17,
-    left: 293,
-    width: 22,
-    height: 22,
-    position: "absolute",
-    overflow: "hidden",
-  },
-  passwordchange: {
-    top: 411,
-    left: 280,
-    fontSize: 14,
-    justifyContent: "center",
-    width: 111,
-    height: 21,
-    textAlign: "center",
-    fontWeight: "bold",
-    position: "absolute",
-  },
-  passwordflex: {
-    alignItems: "flex-end",
-    display: "flex",
   },
 });
