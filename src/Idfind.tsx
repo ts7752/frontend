@@ -34,7 +34,7 @@ const Idfind = () => {
           onPress={() => navigation.navigate("Login")}
         >
           <Text style={{ color: "#ffffff", fontWeight: "bold", fontSize: 15 }}>
-            다음
+            로그인 하러 가기
           </Text>
         </TouchableOpacity>
       </View>
