@@ -25,13 +25,13 @@ const Uniauth = () => {
     <View style={styles.view}>
       <View style={styles.view2}>
         <Text style={styles.text1}>대학교 인증</Text>
-        <Text style={styles.text2}>학년을 선택해 주세요</Text>
-        <TextInput style={styles.input} placeholder="학년"></TextInput>
+        <Text style={styles.text2}>학과를 선택해 주세요</Text>
+        <TextInput style={styles.input} placeholder="학과"></TextInput>
       </View>
       <View style={styles.view3}>
         <TouchableOpacity
           style={styles.buttonchild}
-          onPress={() => navigation.navigate("Uniauthhakbun")}
+          onPress={() => navigation.navigate("Emailauth")}
         >
           <Text style={{ color: "#ffffff", fontWeight: "bold", fontSize: 15 }}>
             다음

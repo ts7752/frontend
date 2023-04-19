@@ -13,8 +13,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import CryptoJS from "crypto-js";
+import { Dimensions } from "react-native";
 
 const Stack = createStackNavigator();
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 const Login = () => {
   const navigation = useNavigation<any>();
@@ -50,13 +53,12 @@ const Login = () => {
       <View style={styles.enteryouremailinput}>
         <TextInput
           style={styles.enteryourpasswordinputchild}
-          placeholder="이메일"
           onChangeText={(email) => setEmail(email)}
           autoCapitalize="none"
           autoCorrect={false}
+          placeholder="이메일"
         />
       </View>
-
 
       <View style={styles.enteryourpasswordinput}>
         <TextInput
@@ -78,15 +80,30 @@ const Login = () => {
           onPress={() => {
             forgetPassword();
           }}
-          style={styles.passwordchange}
+          style={{ marginBottom: 30, marginTop: -10 }}
         >
-          <Text style={styles.passwordflex}> 비밀번호 찾기</Text>
+          <Text style={{ fontWeight: "bold" }}> 비밀번호 찾기</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => loginUser(email, password)}
-          style={styles.loginbuttonchild}
+          style={{
+            backgroundColor: "#000000",
+            justifyContent: "center",
+            width: "90.23%",
+            height: "15%",
+            marginTop: 0,
+          }}
         >
-          <Text style={styles.loginbuttontext}> 로그인 </Text>
+          <Text
+            style={{
+              textAlign: "center",
+              color: "#ffffff",
+              fontWeight: "bold",
+            }}
+          >
+            {" "}
+            로그인{" "}
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -102,6 +119,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     width: "100%",
     backgroundColor: "#ffffff",
+    alignItems: "center",
   },
   textInput: {
     top: 349,
@@ -118,6 +136,7 @@ const styles = StyleSheet.create({
     height: 56,
     width: 331,
     position: "absolute",
+    alignItems: "center",
   },
   textInputchild: {
     backgroundColor: "#ffffff",
@@ -138,13 +157,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   button: {
-    height: "100%",
-    top: "0%",
+    flex: 2,
+    height: "40%",
+    marginTop: "0%",
     bottom: "0%",
     left: "0%",
     right: "0%",
     position: "absolute",
     width: "100%",
+    alignItems: "center",
   },
   myplaceuni: {
     fontSize: 30,
@@ -168,17 +189,19 @@ const styles = StyleSheet.create({
   },
   enteryouremailinput: {
     top: 270,
-    left: 49,
+
     width: 331,
     position: "absolute",
     height: 56,
+    alignItems: "center",
   },
   enteryourpasswordinput: {
     top: 349,
-    left: 49,
+
     width: 331,
     position: "absolute",
     height: 56,
+    alignItems: "center",
   },
   loginbuttonchild: {
     height: "6.43%",

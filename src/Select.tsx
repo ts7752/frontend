@@ -9,19 +9,33 @@ const Select = () => {
   const navigation = useNavigation<any>();
   return (
     <View style={styles.loginpage}>
-      <Text style={styles.myplace}> MyPlaceUNI</Text>
+      <Text style={{ textAlign: "center", fontSize: 30, fontWeight: "bold" }}>
+        {" "}
+        MyPlaceUNI
+      </Text>
       <TouchableOpacity
         onPress={() => navigation.navigate("Login")}
         style={styles.loginbutton}
       >
-        <Text style={styles.logintext}> 로그인 </Text>
+        <Text
+          style={{ textAlign: "center", color: "#ffffff", fontWeight: "bold" }}
+        >
+          {" "}
+          로그인{" "}
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => navigation.navigate("Registration")}
         style={styles.registerbutton}
       >
-        <Text style={styles.registrationtext}> 회원가입 </Text>
+        <Text
+          style={{ textAlign: "center", fontWeight: "bold", color: "#000000" }}
+        >
+          {" "}
+          회원가입{" "}
+        </Text>
       </TouchableOpacity>
+
       <Text style={styles.Text}>고객센터</Text>
     </View>
   );
@@ -39,6 +53,7 @@ const styles = StyleSheet.create({
     right: "4.65%",
     width: "90.23%",
     position: "absolute",
+    justifyContent: "center",
   },
   registerbutton: {
     borderStyle: "solid",
@@ -51,13 +66,15 @@ const styles = StyleSheet.create({
     right: "4.65%",
     width: "90.23%",
     position: "absolute",
+    justifyContent: "center",
   },
   loginpage: {
     flex: 1,
-    height: 932,
+    height: "100%",
     overflow: "hidden",
     width: "100%",
     backgroundColor: "#ffffff",
+    justifyContent: "center",
   },
   logintext: {
     alignItems: "center",

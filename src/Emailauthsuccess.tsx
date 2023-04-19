@@ -1,108 +1,94 @@
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import Uniauth from "./Uniauth";
 
 const Stack = createStackNavigator();
 
-const Emailauthsuccess = () => {
+const Registersuccess = () => {
   const navigation = useNavigation<any>();
   return (
     <View style={styles.container}>
       <Image
+        style={styles.scImage}
         source={require("../assets/RegisterDone.png")}
-        style={styles.icon}
       ></Image>
-      <View style={styles.textview}>
-        <Text style={styles.toptext}>인증 완료</Text>
-        <Text style={styles.bottomtext}>환영합니다!</Text>
+      <View style={styles.flextextview}>
+        <Text style={styles.text2}>인증 완료</Text>
+        <Text style={styles.text3}>환영 합니다!</Text>
       </View>
-      <View style={styles.button}>
+      <View style={styles.nextbutton}>
         <TouchableOpacity
-          style={styles.buttonchild}
           onPress={() => navigation.navigate("Login")}
+          style={styles.nextbuttonchild}
         >
-          <Text style={styles.buttontext}>로그인 하러 가기</Text>
+          <Text style={styles.buttontext}>로그인하러 가기</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
 
+export default Registersuccess;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
     width: "100%",
     overflow: "hidden",
-    height: 932,
+    backgroundColor: "#ffffff",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingBottom: 100,
   },
-  backicon: {
-    right: 0,
-    height: 47,
-    left: 0,
-    top: 0,
-    maxWidth: "100%",
-    position: "absolute",
-    overflow: "hidden",
-  },
-  icon: {
-    width: 103,
+  scImage: {
+    width: 100,
     height: 100,
-    left: 163,
-    top: 302,
     position: "absolute",
     overflow: "hidden",
   },
-  textview: {
-    top: 443,
-    left: 101,
-    height: 62,
-    width: 240,
-    position: "absolute",
-  },
-  toptext: {
-    fontSize: 25,
-    fontWeight: "700",
+
+  text2: {
+    fontSize: 26,
     color: "#000000",
-    textAlign: "center",
+    width: 240,
     left: 0,
     top: 0,
-    width: 240,
-    position: "absolute",
-  },
-  bottomtext: {
+    marginTop: 80,
+    fontWeight: "700",
     textAlign: "center",
-    position: "absolute",
-    fontSize: 15,
-    top: 39,
-    left: 3,
+  },
+  text3: {
+    marginTop: 10,
     lineHeight: 23,
     fontWeight: "500",
     color: "gray",
     width: 234,
+    textAlign: "center",
   },
-  button: {
-    top: 549,
-    left: 49,
-    height: 41,
-    width: 41,
+  nextbutton: {
+    paddingTop: 350,
+    alignItems: "center",
+    justifyContent: "flex-end",
     position: "absolute",
   },
-  buttonchild: {
-    height: 60,
-    width: 330,
-    position: "absolute",
-    borderRadius: 5,
+  nextbuttonchild: {
+    borderRadius: 10,
     backgroundColor: "#000000",
+    justifyContent: "center",
+    height: 56,
+    width: 342,
   },
   buttontext: {
-    top: 22,
+    color: "#ffffff",
     textAlign: "center",
-    fontWeight: "bold",
-    color: "white",
-    marginLeft: 15,
+    fontWeight: "700",
+  },
+  flextextview: {
+    marginTop: 180,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
   },
 });
-
-export default Emailauthsuccess;

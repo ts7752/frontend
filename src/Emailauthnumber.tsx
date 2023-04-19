@@ -11,26 +11,26 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
-const Emailauth = () => {
+const Emailauthnumber = () => {
   const [emailauth1, setEmail] = useState<any>("");
 
   const navigation = useNavigation<any>();
   return (
     <View style={styles.container}>
       <View style={styles.text1}>
-        <Text style={styles.helloregisterto}>학교 이메일을 입력해 주세요</Text>
+        <Text style={styles.helloregisterto}>코드 입력</Text>
       </View>
       <View style={styles.confirminput}>
         <TextInput
           style={styles.confirminputitem}
-          placeholder="이메일"
+          placeholder="인증번호"
           onChangeText={(emailauth1) => setEmail(emailauth1)}
         ></TextInput>
       </View>
 
       <View style={styles.endbuttonposition}>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Emailauthnumber")}
+          onPress={() => navigation.navigate("Emailauthsuccess")}
           style={styles.endbuttonchild}
         >
           <Text style={styles.buttonText1}>완료</Text>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
   text1: {
-    alignItems: "flex-start",
+    marginLeft: "5%",
     height: 80,
     marginTop: "30%",
   },
@@ -145,4 +145,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Emailauth;
+export default Emailauthnumber;

@@ -12,6 +12,10 @@ import Registersuccess from "./src/Registersuccess";
 import Uniauth from "./src/Uniauth";
 import Emailauth from "./src/Emailauth";
 import Emailauthsuccess from "./src/Emailauthsuccess";
+import Emailauthnumber from "./src/Emailauthnumber";
+import Uniauthhakbun from "./src/Uniauthhakbun";
+import Uniauthhakgua from "./src/Uniauthhakgua";
+import Uniauthhakgyo from "./src/Uniauthhakgyo";
 
 const Stack = createStackNavigator();
 
@@ -29,6 +33,10 @@ function App() {
       <Stack.Screen name="Emailauth" component={Emailauth} />
       <Stack.Screen name="Dashboard" component={Dashboard} />
       <Stack.Screen name="Emailauthsuccess" component={Emailauthsuccess} />
+      <Stack.Screen name="Emailauthnumber" component={Emailauthnumber} />
+      <Stack.Screen name="Uniauthhakbun" component={Uniauthhakbun} />
+      <Stack.Screen name="Uniauthhakgua" component={Uniauthhakgua} />
+      <Stack.Screen name="Uniauthhakgyo" component={Uniauthhakgyo} />
     </Stack.Navigator>
   );
 }
