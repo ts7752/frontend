@@ -14,6 +14,7 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import CryptoJS from "crypto-js";
 import { Dimensions } from "react-native";
+//teststestt
 
 const Stack = createStackNavigator();
 const windowWidth = Dimensions.get("window").width;
